@@ -1,0 +1,110 @@
+
+
+
+
+
+\newcommand\emptyline{%
+  \vspace{\baselineskip}
+}   % Leerzeile
+
+\newcommand\el{\emptyline}   % Leerzeile (Kurzform)
+
+
+\newcommand\inserthrule{{\noindent\normalfont\rule{\textwidth}{1pt}}}
+ % durchgehender waagerechter Strich
+
+
+\newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
+   \renewcommand{\today}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
+ % Ändert das Datumsformat des Befehls \today von TT.MM.JJ in TT.MM.JJJJ
+
+
+
+\newcommand{\gesamtzahlseiten}{}
+\renewcommand{\gesamtzahlseiten}{\ (von insgesamt~\ztotpages )}
+
+      
+
+\newcounter{empfehlungsnummer}
+\setcounter{empfehlungsnummer}{1}
+\newcounter{empfehlungsnummer_lokal}
+\setcounter{empfehlungsnummer_lokal}{1}
+
+ %  \setcounter{empfehlungsnummer_lokal}{\value{empfehlungsnummer}}
+   %  \usecounter{empfehlungsnummer_lokal}
+   %  \settowidth\labelwidth{\makelabel{E--999}}
+   %  \setlength\leftmargin{\labelwidth+\labelsep}
+   
+   
+ %  \setlength{\marginempfehlungen}{3cm}
+   
+  
+\newenvironment{empfehlung_einzel}
+  {%
+
+    \inserthrule  
+  
+   \noindent{\bf Empfehlung} 
+  % \stepcounter{Empfehlungen}   
+  \begin{enumerate}[resume*=empfehlungen]{%
+    } 
+}{%
+     \end{enumerate}   
+  
+
+   \inserthrule
+   
+ }    
+   
+  
+\newenvironment{empfehlungsliste}
+  {%
+
+  \inserthrule  
+  
+   \noindent{\bf Empfehlungen} 
+  % \stepcounter{Empfehlungen}   
+  \begin{enumerate}[resume*=empfehlungen]{%
+    } 
+}{%
+     \end{enumerate}   
+  
+
+   \inserthrule
+   
+ }    
+   
+   
+   
+   
+\newcommand{\myclearpage}{\clearpage} % either clearpage or empty
+   
+   
+
+\newcommand\makedraft{%
+  \usepackage{draftwatermark}
+  \SetWatermarkText{ENTWURF \today}
+  \SetWatermarkLightness{0.9}  % 1.0 white 0.0 black
+  \SetWatermarkScale{1.5}    % Default 1.2
+}
+
+
+\newcommand\signaturefield{%
+
+~
+
+\begin{tabular}{ll}
+
+\textit{Ort und Datum} & \rule[-0.2cm]{10cm}{.3mm} \\
+
+~  & ~ \\
+
+~ & ~ \\
+
+\textit{Unterschrift} &  \rule[-0.2cm]{10cm}{.3mm} \\
+
+\end{tabular}
+
+}
+
+

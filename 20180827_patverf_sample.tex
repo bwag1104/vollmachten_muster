@@ -1,0 +1,711 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,headheight=30pt]{geometry} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym} % For smileys
+\usepackage[main=german,english,french,latin]{babel}
+\usepackage[style=german]{csquotes}    % Anführungszeichen \enquote{text}
+%\usepackage{tex4ht}
+
+\usepackage{parskip}
+
+\usepackage{zref-totpages} % Gesamtzahl Seiten
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+\usepackage{url}
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=HTML} 
+ 
+ 
+
+\usepackage{enumitem}    % numbered lists
+  
+\usepackage[small]{titlesec}  % small section titles
+\usepackage[flushmargin]{footmisc}  % footnotes aligned
+
+\usepackage{helvet}  % Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\setlength{\parindent}{0pt}  % no indentation of paragraphs
+
+\input{my_cmds}
+\input{my_data_sample}
+\input{my_datacmds}
+
+
+% \makedraft
+
+\author{\myfullname}
+\title{Patientenverfügung\\
+       }
+\date{\dateissued}
+
+
+
+
+
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{\small \myfullname}
+\chead{}
+\rhead{\small Patientenverfügung} 
+%
+\lfoot{\small Fassung \dateissued, gedruckt \today}
+\cfoot{}
+\rfoot{\small Seite \thepage\gesamtzahlseiten}
+%
+
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\usepackage{pdfpages}                 % Für \includepdf{.pdf}
+\setlist[enumerate]{label=E--\arabic*,leftmargin=2cm}
+
+
+% Dokumentinformationen
+\usepackage{hyperref}                  % \url{URL} \href{URL}{text}
+
+
+
+\hypersetup{
+   unicode=true,
+   bookmarksopenlevel={section},
+   pdftoolbar=true,
+   pdftitle={patverf_ww},
+   pdfsubject={Patientenverfügung},
+   pdfauthor={\myfullname},
+   pdfkeywords={Patientenverfügung, Morbus Parkinson},
+   pdfcreator={pdflatex},
+   colorlinks=true,
+   breaklinks=true,
+   citecolor={black},
+   linkcolor={blue},  
+   menucolor={black},  
+   urlcolor={blue},
+   draft=false
+   }
+
+
+\begin{document}
+
+
+\input{my_hyphenation_de}
+
+
+% \bibliographystyle{alpha}
+
+
+
+\maketitle
+\tableofcontents
+\setcounter{page}{1}
+
+\newpage
+
+
+\section{Kurzübersicht}
+
+
+\subsection{Personen}
+
+\begin{tabular}{ll}
+
+\textbf{Personen} & ~ \\
+
+
+~  & ~ \\
+
+Verfügender Patient & \myfullname\ \\
+~                   &  geb.\ am \mybirthday\ \\
+
+
+~  & ~ \\
+
+
+
+1. Vertrauensperson & \mytrustedone\ \\
+und Bevollmächtigte  & geb.\ am \mytrustedonebirthday\ \\
+
+
+~  & ~ \\
+
+
+2. Vertrauensperson & \mytrustedtwo\ \\
+und Bevollmächtigter  & geb.\ am \mytrustedtwobirthday\ \\
+
+
+~  & ~ \\
+
+
+3. Vertrauensperson & \mytrustedthree\ \\
+behandelnde Neurologin  & ~ \\
+
+
+~  & ~ \\
+
+Kontaktdaten für alle & Siehe Beiblatt \\
+
+~ & ~ \\
+
+\end{tabular}
+
+\subsection{Situationen}
+
+\begin{itemize}
+
+\item Wahrscheinlich unabwendbarer Sterbeprozess
+
+\item Endstadium einer unheilbaren, tödlichen Krankheit
+
+\item Koma länger als 1 Woche
+
+\item Praktisch vollkommene Bewegungsunfähigkeit
+
+\item Schwere Impuls-Kontrollstörungen (Beurteilung durch einen Neurologen)
+
+\item Erloschene Fähigkeit zu Entscheidungen und Kontakt
+
+\item  Unfähigkeit zur Aufnahme von Nahrung und Flüssigkeit (z.B.\ bei Demenz)
+
+
+\end{itemize}
+
+
+\subsection{Medizinische Maßnahmen}
+
+\begin{tabular}{ll}
+
+
+
+Lebenserhaltende Maßnahmen & nein \\
+
+~  & ~ \\
+
+
+Schmerz- und  & nur im Rahmen einer \\
+Symptombehandlung & palliativmedizinischen Versorgung \\
+
+~  & ~ \\
+
+
+Künstliche Ernährung und & nur bei palliativmedizinischer Indikation \\
+Flüssigkeitszufuhr &  zur Beschwerdelinderung \\
+
+~  & ~ \\
+
+
+Wiederbelebung und & keine \\
+künstliche Beatmung & ~ \\
+
+~  & ~ \\
+
+
+Dialyse & keine \\
+
+~  & ~ \\
+
+
+Gabe von Blut oder & nur bei palliativmedizinischer Indikation \\ 
+Blutbestandteilen & zur Beschwerdelinderung \\
+
+~  & ~ \\
+
+
+Antibiotika & nur bei palliativmedizinischer Indikation \\
+~ &  zur Beschwerdelinderung \\
+
+~  & ~ \\
+
+
+Sonstige Medikation & Parkinson-Medikamente sollen \\
+~ & weiterhin gegeben  \\
+
+~ & und im Bedarfsfall auf Geheiß \\
+~ & eines Neurologen angepasst werden \\
+
+~  & ~ \\
+
+
+Operationen & keine, auch keine Tiefe-Hirnstimulation (THS) \\ 
+
+~  & ~ \\
+
+
+
+
+\end{tabular}
+
+
+\subsection{Regelungen für den Todesfall}
+
+\begin{itemize}
+
+\item Verbrennung des Leichnams
+
+\item Einwilligung zur Organspende -- allerdings vorliegende Erkrankung
+Morbus Parkinson: Organe vermutlich mit Medikamenten belastet
+
+\end{itemize}
+
+
+\newpage
+
+
+\section{Grundüberlegungen}
+
+Ich habe keine Angst vor dem Tod. Beim Sterben dagegen ist meine 
+Befürchtung, dass es lang und qualvoll sein könnte. Das will ich natürlich nicht.
+
+Und ebensowenig möchte ich ein Leben führen, das dauerhaft vom
+Funktionieren einer Maschine abhängt.  
+
+Ich bin in der glücklichen Position, alles, was ich im Leben
+erreichen wollte, auch erreicht zu haben. 
+
+Mit diesen Gedankengängen erschließt sich die Logik der Entscheidungen 
+sehr schnell.
+
+Ich bitte um Abschaltung von Maschinen, an denen mein Leben hängt, 
+es sei denn eine solche Maschine hätte bereits vorher 
+mein Leben bestimmt. Und in gleicher Weise will ich auch keine
+andere Maßnahme: keine Wiederbelebung, 
+keine künstliche Beatmung, keine Dialyse etc.
+ 
+Von dieser Grundregel gibt es nur wenige Ausnahmen. Das sind:
+
+\begin{itemize}
+
+\item Schmerzen: Leider bin ich ziemlich empfindlich. Deshalb 
+bitte ich,
+Schmerzen zu dämpfen bzw.\ keine Maßnahmen zu ergreifen, die große 
+Schmerzen auslösen.
+
+\item Parkinson-bezogene Maßnahmen: Diese können normal
+fortgesetzt werden. Deshalb bleiben die Medikamente
+so wie sie sind.
+
+\end{itemize}
+
+Sollte deshalb jemals der Fall eintreten, dass eine Entscheidung 
+auf Basis dieser Patientenverfügung zu treffen ist, dann
+sollte vor allem eins möglichst schnell geklärt werden:
+Kann ich es ohne Ankopplung an eine Maschine weiter schaffen?
+
+Wenn die Antwort darauf \enquote{nein} lautet, dann lassen 
+Sie die Maschine bitte abschalten -- ohne schlechtes Gewissen.
+
+
+
+
+
+\newpage
+
+
+\section{Eingangsformel}
+
+
+Ich, 
+
+\myfullname,
+
+geboren am \mybirthday\ in \myplaceofbirth,  
+
+derzeit wohnhaft in \myaddress, 
+ 
+\textit{(Name, Vorname, geboren am, wohnhaft in)}
+
+bestimme hiermit für den Fall, dass ich meinen Willen nicht mehr bilden oder verständlich äußern kann, in den nachfolgend aufgezählten \enquote{Situationen der Anwendung} die Durchführung 
+der Behandlung wie im Abschnitt \enquote{Medizinische Behandlung
+und Pflege} beschrieben.\footnote{Sprachlicher Hinweis: Die grammatikalisch maskuline Form
+umfasst auch das reale weibliche Geschlecht. Deshalb spreche ich z.B. nicht
+von \enquote{dem Arzt/der Ärztin}. Sondern ich verwende nur die
+maskuline Form und meine damit weibliche wie männliche Ärzte. Dem steht nicht entgegen, dass bei klar bestimmten Personen das Geschlecht auch zum 
+Ausdruck gebracht werden kann.}
+
+
+\section{Situationen der Anwendung}
+
+
+Diese Regelungen sollen in den nachfolgend exemplarisch beschriebenen Situationen zur Anwendung kommen. Mit \enquote{exemplarisch} ist gemeint, dass diese Aufzählung nicht vollständig ist, sondern nur beispielhaft. Bei Vorliegen ähnlicher Gegebenheiten soll also ebenso verfahren werden.
+
+Die Situationen sind diese:
+
+\begin{itemize}
+
+
+\item	Ich befinde mich aller Wahrscheinlichkeit nach unabwendbar im unmittelbaren Sterbeprozess.
+
+
+\item	Ich befinde mich im Endstadium einer unheilbaren, tödlich verlaufenden Krankheit, egal ob der Todeszeitpunkt absehbar ist oder nicht.
+
+
+\item	Ich liege länger als 1 Woche im Koma oder bin in diesem Zeitraum bewusstlos.
+
+\item	Ich bin -- zum Beispiel bedingt durch Parkinson\footnote{Weitere Bezeichnungen sind: \textit{Morbus Parkinson}, Parkinson'sche Erkrankung und ähnliche, Abkürzung: \textit{MP}}, eine Krankheit,
+an der ich leide -- praktisch vollkommen bewegungsunfähig.
+
+
+\item	Ich habe dermaßen häufige und schwere Impuls-Kontrollstörungen, dass
+das Treffen weitreichender Entscheidungen durch mich besser unterbleiben sollte. Die
+Beurteilung sollte durch einen Neurologen erfolgen.
+
+\item	Meine Fähigkeit, Einsichten zu gewinnen, Entscheidungen zu treffen und mit anderen Menschen in Kontakt zu treten, ist aufgrund einer Hirnschädigung aller Wahrscheinlichkeit nach unwiederbringlich erloschen. Dies gilt für direkte Gehirnschädigung z.B.\ durch Unfall, Schlaganfall oder Entzündung ebenso wie für indirekte Gehirnschädigung z.B.\ nach Wiederbelebung, Schock oder Lungenversagen. Es ist mir bewusst, dass in solchen Situationen die Fähigkeit zu Empfindungen erhalten sein kann und dass ein Aufwachen aus diesem Zustand nicht ganz sicher auszuschließen, aber unwahrscheinlich ist.
+
+ Ob die Entscheidungsfähigkeit in diesem Sinne endgültig verloren ist, soll anhand der Einschätzung zweier Ärzte beurteilt werden.
+
+
+\item	Ich bin infolge eines weit fortgeschrittenen Hirnabbauprozesses
+(z. B. bei Demenzerkrankung) auch mit ausdauernder Hilfestellung
+nicht mehr in der Lage, Nahrung und Flüssigkeit auf natürliche Weise zu mir zu nehmen.
+
+ 
+ 
+\end{itemize}
+ 
+ 
+ 
+\section{Medizinische Behandlung und Pflege}
+
+
+
+\subsection{Lebenserhaltende Maßnahmen}
+
+In den oben beschriebenen Situationen wünsche ich,
+dass alle lebenserhaltenden Maßnahmen \textbf{unterlassen werden}. 
+
+Hunger und Durst sollen auf natürliche Weise gestillt werden, gegebenenfalls mit Hilfe bei der Nahrungs- und Flüssigkeitsaufnahme. Ich wünsche Pflege von Mund und Schleimhäuten sowie Körperpflege und das Lindern von Schmerzen, Atemnot, Übelkeit, Angst, Unruhe, Krämpfen, Schüttelfrost sowie 
+auftretender Parkinson-Symptome.
+
+\subsection{Schmerz- und Symptombehandlung}
+
+In den oben beschriebenen Situationen wünsche ich eine 
+Schmerz- und Symptombehandlung,
+wenn alle sonstigen medizinischen Möglichkeiten zur Schmerz- und Symptomkontrolle versagen, auch Mittel mit bewusstseinsdämpfenden Wirkungen zur Beschwerdelinderung.
+
+Sollte bei einer gewählten Medikation ein geringes Risiko 
+bestehen, dass diese zu einer Verkürzung der Lebenszeit führt, so
+nehme ich dieses in Kauf.
+
+
+
+\subsection{Künstliche Ernährung und Flüssigkeitszufuhr}
+
+In den oben beschriebenen Situationen wünsche ich,
+dass eine künstliche Ernährung oder eine künstliche Flüssigkeitszufuhr
+\textbf{nur bei palliativmedizinischer Indikation zur Beschwerdelinderung} erfolgen.
+
+
+\subsection{Wiederbelebung und künstliche Beatmung}
+
+In den oben beschriebenen Situationen sowie in allen Fällen eines
+Kreislaufstillstands oder Atemversagens wünsche ich
+\textbf{die Unterlassung von Versuchen der Wiederbelebung}.
+
+Außerdem soll ein Notarzt \textbf{nicht verständigt} werden bzw.\ im Fall
+einer Hinzuziehung unverzüglich über meine \textbf{Ablehnung von Wiederbelebungsmaßnahmen} informiert werden.
+
+
+In den oben beschriebenen Situationen wünsche ich,
+dass \textbf{keine künstliche Beatmung durchgeführt} bzw.\ 
+ eine \textbf{schon eingeleitete Beatmung eingestellt} wird.
+ Dies gilt unter der Voraussetzung, dass ich Medikamente zur Linderung der Luftnot erhalte. Die Möglichkeit einer Bewusstseinsdämpfung oder einer Verkürzung meiner Lebenszeit durch diese Medikamente nehme ich in Kauf.
+
+\subsection{Dialyse, Blut, Blutbestandteile}
+
+In den oben beschriebenen Situationen wünsche ich,
+dass \textbf{keine Dialyse durchgeführt} bzw. eine \textbf{schon 
+eingeleitete Dialyse eingestellt} wird.
+
+In den oben beschriebenen Situationen wünsche ich
+die Gabe von Blut oder Blutbestandteilen
+\textbf{nur bei palliativmedizinischer Indikation zur Beschwerdelinderung}.
+  
+\subsection{Antibiotika und sonstige Medikation}
+
+In den oben beschriebenen Situationen wünsche ich
+Antibiotika \textbf{nur bei palliativmedizinischer Indikation zur Beschwerdelinderung}.
+
+Die Gabe geeigneter Parkinson-Medikamente soll solange erfolgen, bis
+ich sterbe. Eine Änderung der Medikation soll vorgenommen werden,
+wenn ein Neurologe dies als sinnvoll erachtet.
+
+Beispielsweise sollte ein Dopaminagonist abgesetzt oder reduziert werden, sofern er bei mir Impuls-Kontroll-Störungen auslöst.
+
+Und auch weitere Medikamente sollen gegeben werden, sofern sie einen
+fühlbaren Mehrwert stiften. Zum Beispiel sollten krampflösende 
+Mittel gegeben werden, wenn Krämpfe auftreten (was in fortgeschrittenem Parkinson-Stadium nicht selten geschieht).
+
+
+\subsection{Operationen}
+
+Ich wünsche \textbf{keine} Operationen.
+
+Dies gilt auch und insbesondere für die sogenannte \enquote{Tiefe
+Hirnstimulation} (THS, auch oft nach dem englischen Begriff 
+\textit{deep brain stimulation} als \textit{dbs} abgekürzt).
+
+
+
+\subsection{Ort der Behandlung, Beistand}
+
+Ich habe diesbezüglich keine besonderen Wünsche.
+
+
+\section{Umgang mit der Verfügung}
+
+\subsection{Besondere Vertrauenspersonen und Bevollmächtigte}
+
+Für einige der nachfolgenden Abschnitte müssen Personen benannt werden, 
+denen ich voll vertraue. Ich benenne diese hier:
+
+\begin{itemize}
+
+
+\item[1.] \mytrustedone, geb.\ am \mytrustedonebirthday,
+
+\item[2.] \mytrustedtwo. geb.\ am \mytrustedtwobirthday.
+
+
+\end{itemize}
+
+Diese beiden erhalten zugleich -- jeweils einzeln -- alle erforderlichen Vollmachten, um mich in Gesundheitsbelangen zu vertreten.
+
+Außerdem gehört zum Personenkreis der benannten Vertrauenspersonen 
+die Neurologin, die mich über viele Jahre hinweg sehr gut behandelt hat:
+
+
+\begin{itemize}
+
+\item[3.] \mytrustedthree.
+
+
+\end{itemize}
+
+Ein Blatt mit den derzeitigen Kontaktdaten dieser Personen wird
+separat beigefügt. Sie werden nachfolgend als \enquote{benannte
+Vertrauenspersonen} bezeichnet.
+
+Weitere Vertrauenspersonen können auf dem Kontaktdatenblatt
+ergänzt werden. Dazu muss diese Verfügung nicht
+geändert werden. Auch für sie gelten die Regelungen dieser
+Verfügung. 
+
+Anders dagegen ist es bei der Rückgängigmachung einer
+Benennung als Vertrauensperson. Dies kann nur durch
+Neufassung dieser Patientenverfügung durchgeführt werden.
+
+
+\subsection{Entbindung von der ärztlichen Schweigepflicht}
+
+Ich entbinde die mich behandelnden Ärzte von der Schweigepflicht 
+gegenüber allen, die im Abschnitt \enquote{Besondere Vertrauenspersonen} benannt sind.
+
+
+\subsection{Verbindlichkeit und Durchsetzung}
+
+Der in meiner Patientenverfügung geäußerte Wille zu bestimmten ärztlichen und pflegerischen Maßnahmen soll von den behandelnden Ärzten und dem Behandlungsteam befolgt werden. Jede der von mir
+als vertrauenswürdig benannten Personen (s.o.\ \enquote{Besondere Vertrauenspersonen}) soll sich dafür
+einsetzen, dass mein Patientenwille durchgesetzt wird.
+
+Sollte ein Arzt oder das Behandlungsteam nicht bereit sein, meinen in dieser Patientenverfügung geäußerten Willen zu befolgen, erwarte ich, dass für eine anderweitige medizinische oder pflegerische Behandlung gesorgt wird. Von den als vertrauenswürdig Benannten wünsche ich mir, dass sie die weitere Behandlung so organisieren, dass meinem Willen entsprochen wird.
+
+\subsection{Auslegung}
+
+Wenn ich meine Patientenverfügung nicht widerrufen habe, wünsche ich nicht, dass mir in der konkreten Anwendungssituation eine Änderung meines Willens unterstellt wird. Wenn aber die behandelnden Ärzte/das Behandlungsteam/die benannten Vertrauenspersonen aufgrund meiner Gesten, Blicke oder anderen Äußerungen die Auffassung vertreten, dass ich entgegen den Festlegungen in meiner Patientenverfügung doch behandelt oder nicht behandelt werden möchte, dann ist im Konsens der zu diesem Zeitpunkt Beteiligten zu ermitteln, ob die Festlegungen in meiner Patientenverfügung noch meinem aktuellen Willen entsprechen. Bei unterschiedlichen Meinungen soll in diesen Fällen der Auffassung folgender Personen besondere Bedeutung zukommen: benannte Vertrauenspersonen.
+
+\subsection{Ergänzende Papiere und Aufbewahrung}
+
+
+Ich habe zusätzlich zur Patientenverfügung eine Vorsorgevollmacht
+für Gesundheitsangelegenheiten erteilt und den Inhalt dieser Patientenverfügung mit
+den von mir benannten Vertrauenspersonen besprochen. 
+
+Darüberhinaus füge ich bei: ein Blatt mit den derzeitigen Kontaktdaten der hier benannten Personen.
+
+Das Blatt mit den Kontaktdaten enthält auch Angaben über die 
+Aufbewahrungsorte.
+
+
+\section{Regelungen für den Fall des Todes}
+
+\subsection{Beerdigung / Beisetzung}
+
+Ich wünsche Feuerbestattung, soweit dies möglich ist. Nach meinem Tod soll
+der Leichnam vollständig verbrannt und die Asche verstreut werden.
+
+\subsection{Organspende}
+
+Ich stimme einer Entnahme meiner Organe nach meinem Tod zu 
+Transplantations- oder Forschungszwecken zu.
+
+Ich weise allerdings darauf hin, dass ich seit vielen Jahren an \textit{Morbus Parkinson} erkrankt
+bin und dagegen Tabletten nehme. Einige meiner Organe werden daher
+vermutlich mit Medikamentenrückständen belastet sein.
+
+Komme ich nach ärztlicher Beurteilung bei einem sich abzeichnenden Hirntod als Organspender in Betracht und müssen dafür ärztliche Maßnahmen durchgeführt werden, die ich in meiner Patientenverfügung ausgeschlossen habe, dann gehen die Bestimmungen in meiner Patientenverfügung vor.
+
+
+\section{Schluss}
+
+Soweit ich bestimmte Behandlungen wünsche oder ablehne, verzichte ich ausdrücklich auf eine (weitere) ärztliche 
+Aufklärung.
+
+Mir ist die Möglichkeit der Änderung und des Widerrufs einer Patientenverfügung bekannt.
+
+Ich bin mir des Inhalts und der Konsequenzen meiner darin getroffenen Entscheidungen bewusst.
+
+Ich habe die Patientenverfügung in eigener Verantwortung und ohne äußeren Druck erstellt.
+
+Ich bin im Vollbesitz meiner geistigen Kräfte.
+
+
+Ich habe mich vor der Erstellung dieser Patientenverfügung durch meine
+Neurologin, \mytrustedthree, beraten lassen.
+
+
+
+Diese Patientenverfügung gilt solange, bis ich sie widerrufe.
+
+~
+
+\begin{tabular}{ll}
+
+\textit{Ort und Datum} & \rule[-0.2cm]{10cm}{.3mm} \\
+
+~  & ~ \\
+
+~ & ~ \\
+
+\textit{Unterschrift} &  \rule[-0.2cm]{10cm}{.3mm} \\
+
+\end{tabular}
+
+
+
+\section{Ärztliche Aufklärung / Bestätigung der Einwilligungsfähigkeit}
+
+Herr \myfullname, geboren am \mybirthday in \myplaceofbirth, 
+wurde von mir bezüglich der möglichen Folgen dieser Patientenverfügung aufgeklärt.
+
+Er war in vollem Umfang einwilligungsfähig.
+
+~
+
+\begin{tabular}{ll}
+
+\textit{Ort und Datum} & \rule[-0.2cm]{10cm}{.3mm} \\
+
+~  & ~ \\
+
+~ & ~ \\
+
+\textit{Unterschrift} & \\
+
+\textit{Stempel des Arztes} & \rule[-0.2cm]{10cm}{.3mm} \\
+
+\end{tabular}
+
+\textit{(Die Einwilligungsfähigkeit kann auch durch
+ einen Notar bestätigt werden.)}
+
+
+\newpage
+
+\section*{Anhang -- Weitere Überlegungen für diese Patientenverfügung}
+
+\subsection*{Quellen, helfende Institutionen}
+
+Eine wesentliche Quelle waren die Erläuterungen, Mustertexte und 
+Beispiele für Patientenverfügungen auf der Website des
+Bundesministeriums der Justiz und für Verbraucherschutz (Abkürzung \textit{BMJV}). Dies ist der Weblink dorthin: 
+
+\href{https://www.bmjv.de/DE/Themen/VorsorgeUndPatientenrechte/Betreuungsrecht/Betreuungsrecht_node.html}{www.bmjv.de}.
+
+In deren Mustertexten finden sich zahlreiche äußerst interessante Fußnoten 
+und Anmerkungen, die beim Textverständnis helfen. Die für mich wichtigsten davon möchte ich hier (im folgenden Abschnitt) darstellen.
+
+Weitere Quellen oder Institutionen waren:
+
+\begin{itemize}
+
+\item \href{http://ethikzentrum.de/}{ethikzentrum.de}
+
+\item \href{https://www.parkinson.ch/fileadmin/public/docs/Patientenverfuegung_deutsch/PV_2013_DE_final.pdf}{www.parkinson.ch -- Parkinson Schweiz -- Muster einer Patientenverfügung}
+
+\item \href{http://www.vorsorgeregister.de/}{www.vorsorgeregister.de --
+Zentrales Vorsorgeregister der Bundesnotarkammer}
+
+
+\end{itemize}
+
+Das Ethikzentrum führt unter anderem Prüfungen von Patientenverfügungen
+durch.
+
+Bei der schweizerischen Patientenverfügung sind die rechtlichen
+nicht auf Deutschland übertragbar. Bemerkenswert erscheinen 
+die auf Parkinson bezogenen Hinweise. Allerdings beziehen sich diese
+nicht auf Maßnahmen, sondern fast ausschließlich auf Situationen 
+und Organspende.
+  
+  
+Das Vorsorgeregister ist eine gute Anlaufstelle für Archivierungsfragen.   
+
+
+\subsection*{Einzelanmerkungen}
+
+Auch wenn nicht durch Quotierung gekennzeichnet entstammen
+alle Anmerkungen dem Mustertext des BMJV. Bis auf kleine redaktionelle
+Anpassungen handelt es sich um wörtliche Übernahmen.
+
+\begin{itemize}
+
+\item Zur vorletzten Anwendungssituation: Dieser Punkt betrifft nur Gehirnschädigungen mit dem Verlust der Fähigkeit, Einsichten zu gewinnen, Entscheidungen
+zu treffen und mit anderen Menschen in Kontakt zu treten. Es handelt sich dabei häufig um Zustände von
+Dauerbewusstlosigkeit oder um wachkomaähnliche Krankheitsbilder, die mit einem vollständigen oder weitgehenden
+Ausfall der Großhirnfunktionen einhergehen. Diese Patienten sind in der Regel unfähig zu bewusstem
+Denken, zu gezielten Bewegungen oder zu Kontaktaufnahme mit anderen Menschen, während lebenswichtige
+Körperfunktionen wie Atmung, Darm- oder Nierentätigkeit erhalten sind, wie auch möglicherweise die Fähigkeit zu
+Empfindungen. Wachkoma-Patienten sind bettlägerig, pflegebedürftig und müssen künstlich mit
+Nahrung und Flüssigkeit versorgt werden. In seltenen Fällen können sich auch bei Wachkoma-Patienten nach mehreren
+Jahren noch günstige Entwicklungen einstellen, die ein eingeschränkt selbstbestimmtes Leben erlauben. Eine sichere
+Voraussage, ob die betroffene Person zu diesen wenigen gehören wird oder zur Mehrzahl derer, die ihr Leben lang als
+Pflegefall betreut werden müssen, ist bislang nicht möglich.
+
+\item Zum letzten Punkt der Anwendungssituationen: Dies betrifft Gehirnschädigungen infolge eines weit fortgeschrittenen Hirnabbauprozesses, wie sie am häufigsten bei Demenzerkrankungen (z. B. Alzheimer’sche Erkrankung) eintreten. Im Verlauf der Erkrankung werden die Patienten zunehmend unfähiger, Einsichten zu gewinnen und mit ihrer Umwelt verbal zu kommunizieren, während die Fähigkeit zu Empfindungen erhalten bleibt. Im Spätstadium erkennt der Kranke selbst nahe Angehörige nicht mehr und ist schließlich auch nicht mehr in der Lage, trotz Hilfestellung Nahrung und Flüssigkeit auf natürliche Weise zu sich zu nehmen.
+
+\item Zu den Maßnahmen: Die Äußerung, \enquote{keine lebenserhaltenden Maßnahmen} zu wünschen, stellt jedenfalls für sich genommen nicht die für
+eine wirksame Patientenverfügung erforderliche hinreichend konkrete Behandlungsentscheidung dar. Die insoweit
+erforderliche Konkretisierung kann aber gegebenenfalls durch die Benennung bestimmter ärztlicher Maßnahmen oder die
+Bezugnahme auf ausreichend spezifizierte Krankheiten oder Behandlungssituationen erfolgen. Es spricht folglich
+grundsätzlich nichts gegen die Verwendung dieser Formulierung, soweit diese nicht isoliert erfolgt, sondern mit konkreten
+Beschreibungen der Behandlungssituationen und spezifizierten medizinischen Maßnahmen kombiniert wird. 
+
+\item Das Stillen von Hunger und Durst als subjektive Empfindungen gehört zu jeder lindernden Therapie. Viele
+schwerkranke Menschen haben allerdings kein Hungergefühl; dies gilt praktisch ausnahmslos für Sterbende und
+wahrscheinlich auch für Wachkoma-Patientinnen oder -Patienten. Das Durstgefühl ist bei Schwerkranken zwar länger als
+das Hungergefühl vorhanden, aber künstliche Flüssigkeitsgabe hat nur sehr begrenzten Einfluss darauf. Viel besser kann
+das Durstgefühl durch Anfeuchten der Atemluft und durch fachgerechte Mundpflege gelindert werden. Die Zufuhr großer
+Flüssigkeitsmengen bei Sterbenden kann schädlich sein, weil sie unter anderem  zu Atemnotzuständen infolge von
+Wasseransammlung in der Lunge führen kann.
+
+\item Palliativmedizin ist die medizinische Fachrichtung, die sich primär um die Beschwerdelinderung und Aufrechterhaltung der Lebensqualität bei Patienten mit unheilbaren Erkrankungen kümmert. Eine palliativmedizinische Indikation setzt daher immer das Ziel der Beschwerdelinderung und nicht das Ziel der Lebensverlängerung voraus.
+
+\item Die Schlussformel zum Verzicht auf weitere Aufklärung \enquote{dient dazu, darauf hinzuweisen, dass der Ersteller der Patientenverfügung unter den beschriebenen Umständen keine weitere ärztliche Aufklärung wünscht. Diese Aussage ist besonders wichtig, da bestimmte ärztliche Eingriffe nur dann wirksam vorgenommen werden dürfen, wenn ein Arzt den Patienten vorher hinreichend über die medizinische Bedeutung und Tragweite der geplanten Maßnahmen, alternative Behandlungsmöglichkeiten und Konsequenzen eines Verzichts aufgeklärt hat. Einer ärztlichen Aufklärung bedarf es nicht, wenn der einwilligungsfähige Patient auf eine ärztliche Aufklärung verzichtet hat. Aus der Patientenverfügung sollte sich ergeben, ob diese Voraussetzungen erfüllt sind.}
+
+\item Eine Patientenverfügung muss schriftlich verfasst  
+und eigenhändig durch Namensunterschrift oder durch ein durch Notar beglaubigtes Handzeichen unterzeichnet sein. 
+
+Ein Widerruf kann jederzeit formlos erfolgen.
+
+
+\end{itemize}
+
+ 
+
+\end{document}

@@ -1,0 +1,208 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,headheight=30pt]{geometry} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym} % For smileys
+\usepackage[main=german,english,french,latin]{babel}
+\usepackage[style=german]{csquotes}    % Anführungszeichen \enquote{text}
+%\usepackage{tex4ht}
+
+\usepackage{parskip}
+
+\usepackage{zref-totpages} % Gesamtzahl Seiten
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+\usepackage{url}
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=HTML} 
+ 
+ 
+
+\usepackage{enumitem}    % numbered lists
+  
+\usepackage[small]{titlesec}  % small section titles
+\usepackage[flushmargin]{footmisc}  % footnotes aligned
+
+\usepackage{helvet}  % Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\setlength{\parindent}{0pt}  % no indentation of paragraphs
+
+\input{my_cmds}
+\input{my_data_sample}
+
+
+% \makedraft
+
+\author{\myfullname}
+\title{Patientenverfügung\\
+       Kontaktdaten\\
+       }
+\date{\dateissued}
+
+
+
+
+
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{\small \myfullname}
+\chead{}
+\rhead{\small Patientenverfügung - Kontaktdaten} 
+%
+\lfoot{\small Fassung vom \dateissued, gedruckt am \today}
+\cfoot{}
+\rfoot{}
+%
+
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\usepackage{pdfpages}                 % Für \includepdf{.pdf}
+\setlist[enumerate]{label=E--\arabic*,leftmargin=2cm}
+
+
+% Dokumentinformationen
+\usepackage{hyperref}                  % \url{URL} \href{URL}{text}
+
+
+
+\hypersetup{
+   unicode=true,
+   bookmarksopenlevel={section},
+   pdftoolbar=true,
+   pdftitle={patverf_kontakte_\mysign},
+   pdfsubject={Patientenverfügung Kontaktdaten},
+   pdfauthor={\myfullname},
+   pdfkeywords={Patientenverfügung, Kontaktdaten},
+   pdfcreator={pdflatex},
+   colorlinks=true,
+   breaklinks=true,
+   citecolor={black},
+   linkcolor={blue},  
+   menucolor={black},  
+   urlcolor={blue},
+   draft=false
+   }
+
+
+\begin{document}
+
+
+\input{my_hyphenation_de}
+
+
+% \bibliographystyle{alpha}
+
+
+
+%\maketitle
+%\tableofcontents
+\setcounter{page}{1}
+
+%\newpage
+
+
+
+\section*{Kontaktdaten zur Patientenverfügung \myfullname}
+
+
+
+\begin{tabular}{lll}
+
+Patient &  ~  & ~ \\
+
+~  & ~  & \myfullname \\
+
+~ & Adresse & \mystreet \\
+
+~ & ~ & \mycity \\
+
+
+~  & E-Mail &  \myemail \\
+
+~ & Telefon & \mymobile \\
+
+~ & ~ & ~ \\
+
+\hline \\
+
+~ & ~ & ~ \\
+
+1. Vertrauensperson & ~ & ~\\
+und Bevollmächtigte & ~ & ~\\
+
+
+~  & ~  & \mytrustedone \\
+
+~ & Adresse & \mytrustedonestreet \\
+~ & ~ & \mytrustedonecity \\
+
+
+~  & E-Mail &  \mytrustedoneemail \\
+
+~ & Telefon & \mytrustedonemobile \\
+
+~ & ~ & ~ \\
+
+\hline \\
+
+~ & ~ & ~ \\
+
+2. Vertrauensperson & ~ & ~\\
+und Bevollmächtigter & ~ & ~\\
+
+
+~  & ~  & \mytrustedtwo \\
+
+~ & Adresse & \mytrustedtwostreet \\
+~ & ~ & \mytrustedtwocity \\
+
+
+~  & E-Mail &  \mytrustedtwoemail \\
+
+~ & Telefon & \mytrustedtwomobile \\
+
+~ & ~ & ~ \\
+
+\hline \\
+
+~ & ~ & ~ \\
+
+
+3. Vertrauensperson & ~ & ~\\
+und behandelnde Neurologin & ~ & ~\\
+
+
+~  & ~  & \mytrustedthree \\
+
+~ & Adresse & \mytrustedthreestreet \\
+~ & ~ & \mytrustedthreecity \\
+
+
+~  & E-Mail &  \mytrustedthreeemail \\
+
+~ & Telefon & \mytrustedthreemobile \\
+
+~ & ~ & ~ \\
+
+
+
+\end{tabular}
+
+\section*{Aufbewahrungsorte}
+
+Die Patientenverfügung und dieses Kontaktdatenblatt wird beim 
+Patienten und bei den benannten Vertrauenspersonen aufbewahrt.
+
+Weitere Aufbewahrungsorte werden später wahrscheinlich hinzukommen.
+  
+ 
+
+\end{document}
