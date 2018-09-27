@@ -1,0 +1,464 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,headheight=30pt]{geometry} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym} % For smileys
+\usepackage[main=german,english,french,latin]{babel}
+\usepackage[style=german]{csquotes}    % Anführungszeichen \enquote{text}
+%\usepackage{tex4ht}
+
+\usepackage{parskip}
+
+\usepackage{zref-totpages} % Gesamtzahl Seiten
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{paralist}
+\usepackage{url}
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=HTML} 
+ 
+ 
+
+\usepackage{enumitem}    % numbered lists
+  
+\usepackage[small]{titlesec}  % small section titles
+\usepackage[flushmargin]{footmisc}  % footnotes aligned
+
+\usepackage{helvet}  % Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\setlength{\parindent}{0pt}  % no indentation of paragraphs
+
+\input{my_cmds}
+\input{my_data_sample}
+\input{my_datacmds}
+
+
+% \makedraft
+
+\author{\myfullname}
+\title{Vorsorgevollmacht für \\
+       \mytrustedone\\
+       }
+\date{\dateissued}
+
+
+
+
+
+% ============= Kopf- und Fußzeile =============
+\pagestyle{fancy}
+%
+\lhead{\small \myfullname}
+\chead{}
+\rhead{\small Vorsorgevollmacht für \mytrustedone} 
+%
+\lfoot{\small Fassung vom \dateissued, gedruckt am \today}
+\cfoot{}
+\rfoot{\small Seite \thepage\gesamtzahlseiten}
+%
+
+\renewcommand{\footrulewidth}{0.4pt} 
+
+\usepackage{pdfpages}                 % Für \includepdf{.pdf}
+\setlist[enumerate]{label=\arabic*.\ ,leftmargin=1cm}
+
+\newlist{legal}{enumerate}{10}
+\setlist[legal]{label=(\arabic*)\ ,leftmargin=1cm}
+
+
+
+% Dokumentinformationen
+\usepackage{hyperref}                  % \url{URL} \href{URL}{text}
+
+
+
+\hypersetup{
+   unicode=true,
+   bookmarksopenlevel={section},
+   pdftoolbar=true,
+   pdftitle={vorsorgevollmacht_\mysign},
+   pdfsubject={Vorsorgevollmacht}
+   pdfauthor={\myfullname},
+   pdfkeywords={Vorsorgevollmacht},
+   pdfcreator={pdflatex},
+   colorlinks=true,
+   breaklinks=true,
+   citecolor={black},
+   linkcolor={blue},  
+   menucolor={black},  
+   urlcolor={blue},
+   draft=false
+   }
+
+
+\begin{document}
+
+
+\input{my_hyphenation_de}
+
+
+% \bibliographystyle{alpha}
+
+
+
+\maketitle
+\tableofcontents
+\setcounter{page}{1}
+
+\newpage
+
+
+
+
+Ich,
+
+\myfullname,
+
+\mydataofbirth,
+
+derzeit wohnhaft in \myaddress
+
+-- nachstehend \enquote{Vollmachtgeber} genannt -- 
+
+~
+
+
+erteile hiermit Vollmacht an
+
+~
+ 
+\mytrustedone,
+
+\mytrustedonedataofbirth,
+
+derzeit wohnhaft in \mytrustedoneaddress,
+
+-- nachstehend als \enquote{bevollmächtigte Person} oder 
+\enquote{Vertrauensperson} oder \enquote{sie} bezeichnet.
+
+~
+
+Diese Vertrauensperson wird hiermit bevollmächtigt, mich in allen Angelegenheiten zu vertreten, die ich
+im Folgenden angegeben habe. Durch diese Vollmachterteilung soll eine vom Gericht
+angeordnete Betreuung vermieden werden. Die Vollmacht bleibt daher in Kraft, wenn ich nach ihrer
+Errichtung geschäftsunfähig geworden sein sollte.
+
+Die Vollmacht ist nur wirksam, solange die bevollmächtigte Person die Vollmachtsurkunde besitzt und
+bei Vornahme eines Rechtsgeschäfts die Urkunde im Original vorlegen kann.
+
+Aus Gründen der Praktikabilität kann es mehrere Originalurkunden geben.
+
+Die bevollmächtigte Person kann diese Vollmacht alleine ausüben. Dem steht nicht entgegen, dass ich
+weitere Vollmachten erteilt habe oder dies tun werde. 
+
+Die Kontaktdaten der hier genannten Personen werden auf einem separaten Beiblatt erfasst. Damit sind sie leichter aktualisierbar.
+
+
+\section{Gesundheitssorge und Pflegebedürftigkeit}
+
+Sie darf in allen Angelegenheiten der Gesundheitssorge entscheiden, ebenso über
+alle Einzelheiten einer ambulanten oder (teil-)stationären Pflege. Sie ist befugt,
+meinen
+in einer Patientenverfügung festgelegten Willen durchzusetzen.
+
+ 
+ 
+Sie darf insbesondere in eine Untersuchung des Gesundheitszustands, eine
+Heilbehandlung
+oder einen ärztlichen Eingriff einwilligen, diese ablehnen oder die
+Einwilligung in diese Maßnahmen widerrufen, auch wenn mit der Vornahme, dem
+Unterlassen oder dem Abbruch dieser Maßnahmen die Gefahr besteht, dass ich
+sterbe
+oder einen schweren und länger dauernden gesundheitlichen Schaden erleide
+(§ 1904 Absatz 1 und 2 BGB).
+
+ 
+ 
+Sie darf Krankenunterlagen einsehen und deren Herausgabe an Dritte bewilligen.
+Ich entbinde alle mich behandelnden Ärzte und nichtärztliches Personal gegenüber
+meiner bevollmächtigten Vertrauensperson von der Schweigepflicht. Diese darf ihrerseits
+alle mich behandelnden Ärzte und nichtärztliches Personal von der Schweigepflicht
+gegenüber Dritten entbinden.
+
+ 
+ 
+Solange es zu meinem Wohl erforderlich ist, darf sie\footnote{Siehe Gesetzestexte im Anhang}
+
+\begin{itemize}
+
+\item über meine freiheitsentziehende Unterbringung (§ 1906 Absatz 1 BGB), 
+
+\item über freiheitsentziehende Maßnahmen (z.B. Bettgitter, Medikamente u. ä.) in einem Heim oder in einer sonstigen Einrichtung (§ 1906 Absatz 4 BGB),
+
+\item über ärztliche Zwangsmaßnahmen (§ 1906a Absatz 1 BGB),
+
+\item über meine Verbringung zu einem stationären Aufenthalt in einem Krankenhaus, wenn eine ärztliche Zwangsmaßnahme in Betracht kommt (§ 1906a Absatz 4 BGB), 
+
+
+\end{itemize}
+
+entscheiden.
+
+\section{Aufenthalt und Wohnungsangelegenheiten} 
+
+Sie darf meinen Aufenthalt bestimmen. 
+
+Sie darf Rechte und Pflichten aus dem Mietvertrag über meine Wohnung
+einschließlich
+einer Kündigung wahrnehmen sowie meinen Haushalt auflösen. 
+Sie darf einen neuen Wohnungsmietvertrag abschließen und kündigen.
+
+ 
+ 
+Sie darf einen Vertrag nach dem Wohn- und Betreuungsvertragsgesetz
+(Vertrag über die Überlassung von Wohnraum mit Pflege- und Betreuungsleistungen; ehemals: Heimvertrag) abschließen und kündigen. 
+
+
+\section{Behörden}
+
+Sie darf mich bei Behörden, Versicherungen, Renten- und Sozialleistungsträgern vertreten. Dies umfasst auch die 
+datenschutzrechtliche Einwilligung.
+
+ 
+
+\section{Vermögenssorge}
+
+Sie darf mein Vermögen verwalten und hierbei alle Rechtshandlungen und
+Rechtsgeschäfte im In- und Ausland vornehmen, Erklärungen aller Art abgeben
+und entgegennehmen sowie Anträge stellen, abändern, zurücknehmen, 
+
+namentlich darf sie
+
+\begin{itemize}
+
+\item über Vermögensgegenstände jeder Art verfügen (den nachfolgenden
+ Hinweis 1 habe ich zur Kenntnis genommen),
+ 
+ \item Auskunft von Banken, Versicherungen, Investmentgesellschaften
+ sowie allen Institutionen, die für mich zur Vermögensmehrung 
+ bzw.\ -verwaltung tätig sind, erbitten und erhalten,
+
+\item Zahlungen und Wertgegenstände annehmen,
+
+\item Verbindlichkeiten eingehen (den nachfolgenden
+ Hinweis 1 habe ich zur Kenntnis genommen),
+
+\item Willenserklärungen bezüglich meiner Konten, Depots und Safes abgeben. Sie darf
+mich im Geschäftsverkehr mit Kreditinstituten vertreten (den nachfolgenden
+ Hinweis 2 habe ich zur Kenntnis genommen),
+
+\item Schenkungen in dem Rahmen vornehmen, der einem Betreuer rechtlich gestattet ist. 
+
+\end{itemize}
+
+Folgende Geschäfte soll sie \textbf{nicht} wahrnehmen können:
+
+\begin{itemize}
+
+% \item --- (das heisst: es gibt keine Einschränkungen)
+\item Veräußerung oder Schenkung eines Wohnrechts zu meinen Lebzeiten.
+
+\end{itemize}
+
+~
+
+\textbf{Hinweise}
+
+\begin{enumerate}
+
+\item Denken Sie an die erforderliche Form der Vollmacht bei Immobiliengeschäften, für Handelsgewerbe oder die
+Aufnahme eines Verbraucherdarlehens (vgl.\ Ziffer 2.1.5 der 
+Broschüre\footnote{Broschüre des BMJV (Bundesministeriums der Justiz und für 
+Verbraucherschutz). Siehe deren Website \url{https://www.bmjv.de} unter \enquote{Themen -- Vorsorge und Patientenrechte}.} \enquote{Betreuungsrecht}).
+
+
+\item Für die Vermögenssorge in Bankangelegenheiten sollten Sie auf die von Ihrer Bank oder Sparkasse angebotene
+Konto-/Depotvollmacht zurückgreifen. Diese Vollmacht berechtigt den Bevollmächtigten zur Vornahme aller
+Geschäfte, die mit der Konto- und Depotführung in unmittelbarem Zusammenhang stehen. Es werden ihm
+keine Befugnisse eingeräumt, die für den normalen Geschäftsverkehr unnötig sind, wie z. B. der Abschluss von
+Finanztermingeschäften. Die Konto-/Depotvollmacht sollten Sie grundsätzlich in Ihrer Bank oder Sparkasse
+unterzeichnen; etwaige spätere Zweifel an der Wirksamkeit der Vollmachtserteilung können hierdurch
+ausgeräumt werden. Können Sie Ihre Bank/Sparkasse nicht aufsuchen, wird sich im Gespräch mit Ihrer Bank/
+Sparkasse sicher eine Lösung finden.
+
+\end{enumerate}
+
+
+\section{Post und Fernmeldeverkehr}
+
+Sie darf im Rahmen der Ausübung dieser Vollmacht die für mich bestimmte Post
+entgegennehmen, öffnen und lesen. Dies gilt auch für den elektronischen Postverkehr.
+
+Zudem darf sie über den Fernmeldeverkehr einschließlich aller elektronischen
+Kommunikationsformen entscheiden. Sie darf alle hiermit zusammenhängenden
+Willenserklärungen (z. B. Vertragsabschlüsse, Kündigungen) abgeben. 
+
+\section{Vertretung vor Gericht und beim Fiskus} 
+
+Sie darf mich gegenüber Gerichten vertreten sowie Prozesshandlungen aller Art
+vornehmen. 
+
+Auch darf sie meine Steuererklärungen abgeben sowie die Bescheide 
+entgegennehmen.
+
+\section{Untervollmacht}
+
+Sie darf Untervollmacht erteilen. 
+
+\section{Betreuungsverfügung}
+
+Falls trotz dieser Vollmacht eine gesetzliche Vertretung (\enquote{rechtliche Betreuung}) erforderlich
+sein sollte, bitte ich, die oben bezeichnete Vertrauensperson als Betreuer zu bestellen. 
+
+\section{Geltung über den Tod hinaus}
+
+Die Vollmacht gilt über den Tod hinaus. 
+
+\section{Dokumentation}
+
+Jede Handlung, die für mich aufgrund dieser oder einer anderen 
+Vollmacht vorgenommen wird, soll in einem Logbuch dokumentiert werden.
+
+Insbesondere soll dabei erfasst werden: Datum, Gegenseite/Vertragspartner
+(Institution), Repräsentant der Gegenseite oder des Vertragspartners,
+Zweck der Handlung. 
+
+Das Logbuch soll auf Verlangen einem anderen 
+von mir Bevollmächtigten vorgelegt werden. 
+
+
+\section{Weitere Regelungen}
+
+Es gibt keine weiteren Regelungen.
+
+
+
+~
+
+Vollmachtnehmer: Ich bin einverstanden.
+
+\mytrustedone
+
+\signaturefield
+
+~
+
+Vollmachtgeber: Gemäß diesen Bestimmungen erteile ich Vollmacht.
+
+\myfullname
+
+\signaturefield
+
+
+\newpage
+
+\section*{Anhang: Gesetzestexte}
+
+ \addcontentsline{toc}{section}{Anhang: Gesetzestexte}
+
+\subsection*{Bürgerliches Gesetzbuch (BGB)}
+
+
+\subsubsection*{§ 1904 -- Genehmigung des Betreuungsgerichts bei ärztlichen Maßnahmen}
+
+\begin{legal}
+
+\item Die Einwilligung des Betreuers in eine Untersuchung des Gesundheitszustands, eine Heilbehandlung oder einen ärztlichen Eingriff bedarf der Genehmigung des Betreuungsgerichts, wenn die begründete Gefahr besteht, dass der Betreute auf Grund der Maßnahme stirbt oder einen schweren und länger dauernden gesundheitlichen Schaden erleidet. Ohne die Genehmigung darf die Maßnahme nur durchgeführt werden, wenn mit dem Aufschub Gefahr verbunden ist.
+
+\item Die Nichteinwilligung oder der Widerruf der Einwilligung des Betreuers in eine Untersuchung des Gesundheitszustands, eine Heilbehandlung oder einen ärztlichen Eingriff bedarf der Genehmigung des Betreuungsgerichts, wenn die Maßnahme medizinisch angezeigt ist und die begründete Gefahr besteht, dass der Betreute auf Grund des Unterbleibens oder des Abbruchs der Maßnahme stirbt oder einen schweren und länger dauernden gesundheitlichen Schaden erleidet.
+
+\item Die Genehmigung nach den Absätzen 1 und 2 ist zu erteilen, wenn die Einwilligung, die Nichteinwilligung oder der Widerruf der Einwilligung dem Willen des Betreuten entspricht.
+
+\item Eine Genehmigung nach den Absätzen 1 und 2 ist nicht erforderlich, wenn zwischen Betreuer und behandelndem Arzt Einvernehmen darüber besteht, dass die Erteilung, die Nichterteilung oder der Widerruf der Einwilligung dem nach § 1901a festgestellten Willen des Betreuten entspricht.
+
+\item Die Absätze 1 bis 4 gelten auch für einen Bevollmächtigten. Er kann in eine der in Absatz 1 Satz 1 oder Absatz 2 genannten Maßnahmen nur einwilligen, nicht einwilligen oder die Einwilligung widerrufen, wenn die Vollmacht diese Maßnahmen ausdrücklich umfasst und schriftlich erteilt ist.
+
+\end{legal}
+
+
+\textit{Quelle:} \url{https://www.gesetze-im-internet.de/bgb/__1904.html}
+
+\textit{Datum der Übernahme:} 25.09.2018
+
+
+
+
+\subsubsection*{§ 1906 -- Genehmigung des Betreuungsgerichts bei freiheitsentziehender Unterbringung und bei freiheitsentziehenden Maßnahmen}
+
+\begin{legal}
+
+\item  Eine Unterbringung des Betreuten durch den Betreuer, die mit Freiheitsentziehung verbunden ist, ist nur zulässig, solange sie zum Wohl des Betreuten erforderlich ist, weil
+
+\begin{enumerate}
+\item auf Grund einer psychischen Krankheit oder geistigen oder seelischen Behinderung des Betreuten die Gefahr besteht, dass er sich selbst tötet oder erheblichen gesundheitlichen Schaden zufügt, oder
+
+\item zur Abwendung eines drohenden erheblichen gesundheitlichen Schadens eine Untersuchung des Gesundheitszustands, eine Heilbehandlung oder ein ärztlicher Eingriff notwendig ist, die Maßnahme ohne die Unterbringung des Betreuten nicht durchgeführt werden kann und der Betreute auf Grund einer psychischen Krankheit oder geistigen oder seelischen Behinderung die Notwendigkeit der Unterbringung nicht erkennen oder nicht nach dieser Einsicht handeln kann.
+
+\end{enumerate}
+
+\item Die Unterbringung ist nur mit Genehmigung des Betreuungsgerichts zulässig. Ohne die Genehmigung ist die Unterbringung nur zulässig, wenn mit dem Aufschub Gefahr verbunden ist; die Genehmigung ist unverzüglich nachzuholen.
+
+\item Der Betreuer hat die Unterbringung zu beenden, wenn ihre Voraussetzungen weggefallen sind. Er hat die Beendigung der Unterbringung dem Betreuungsgericht unverzüglich anzuzeigen.
+
+\item Die Absätze 1 bis 3 gelten entsprechend, wenn dem Betreuten, der sich in einem Krankenhaus, einem Heim oder einer sonstigen Einrichtung aufhält, durch mechanische Vorrichtungen, Medikamente oder auf andere Weise über einen längeren Zeitraum oder regelmäßig die Freiheit entzogen werden soll.
+
+\item Die Unterbringung durch einen Bevollmächtigten und die Einwilligung eines Bevollmächtigten in Maßnahmen nach Absatz 4 setzen voraus, dass die Vollmacht schriftlich erteilt ist und die in den Absätzen 1 und 4 genannten Maßnahmen ausdrücklich umfasst. Im Übrigen gelten die Absätze 1 bis 4 entsprechend.
+
+\end{legal}
+
+\textit{Quelle:} \url{https://www.gesetze-im-internet.de/bgb/__1906.html}
+
+\textit{Datum der Übernahme:} 25.09.2018
+
+
+\subsubsection*{§ 1906a -- Genehmigung des Betreuungsgerichts bei ärztlichen Zwangsmaßnahmen}
+
+\begin{legal}
+
+\item  Widerspricht eine Untersuchung des Gesundheitszustands, eine Heilbehandlung oder ein ärztlicher Eingriff dem natürlichen Willen des Betreuten (ärztliche Zwangsmaßnahme), so kann der Betreuer in die ärztliche Zwangsmaßnahme nur einwilligen, wenn
+
+\begin{enumerate}
+\item die ärztliche Zwangsmaßnahme zum Wohl des Betreuten notwendig ist, um einen drohenden erheblichen gesundheitlichen Schaden abzuwenden,
+
+\item der Betreute auf Grund einer psychischen Krankheit oder einer geistigen oder seelischen Behinderung die Notwendigkeit der ärztlichen Maßnahme nicht erkennen oder nicht nach dieser Einsicht handeln kann,
+
+\item die ärztliche Zwangsmaßnahme dem nach § 1901a zu beachtenden Willen des Betreuten entspricht,
+
+\item zuvor ernsthaft, mit dem nötigen Zeitaufwand und ohne Ausübung unzulässigen Drucks versucht wurde, den Betreuten von der Notwendigkeit der ärztlichen Maßnahme zu überzeugen,
+
+\item der drohende erhebliche gesundheitliche Schaden durch keine andere den Betreuten weniger belastende Maßnahme abgewendet werden kann,
+
+\item der zu erwartende Nutzen der ärztlichen Zwangsmaßnahme die zu erwartenden Beeinträchtigungen deutlich überwiegt und
+
+\item die ärztliche Zwangsmaßnahme im Rahmen eines stationären Aufenthalts in einem Krankenhaus, in dem die gebotene medizinische Versorgung des Betreuten einschließlich einer erforderlichen Nachbehandlung sichergestellt ist, durchgeführt wird.
+
+\end{enumerate}
+
+§ 1846 ist nur anwendbar, wenn der Betreuer an der Erfüllung seiner Pflichten verhindert ist.
+
+\item Die Einwilligung in die ärztliche Zwangsmaßnahme bedarf der Genehmigung des Betreuungsgerichts.
+
+\item Der Betreuer hat die Einwilligung in die ärztliche Zwangsmaßnahme zu widerrufen, wenn ihre Voraussetzungen weggefallen sind. Er hat den Widerruf dem Betreuungsgericht unverzüglich anzuzeigen.
+
+\item Kommt eine ärztliche Zwangsmaßnahme in Betracht, so gilt für die Verbringung des Betreuten gegen seinen natürlichen Willen zu einem stationären Aufenthalt in ein Krankenhaus § 1906 Absatz 1 Nummer 2, Absatz 2 und 3 Satz 1 entsprechend.
+
+\item Die Einwilligung eines Bevollmächtigten in eine ärztliche Zwangsmaßnahme und die Einwilligung in eine Maßnahme nach Absatz 4 setzen voraus, dass die Vollmacht schriftlich erteilt ist und die Einwilligung in diese Maßnahmen ausdrücklich umfasst. Im Übrigen gelten die Absätze 1 bis 3 entsprechend.
+
+\end{legal}
+
+\textit{Quelle:} \url{https://www.gesetze-im-internet.de/bgb/__1906a.html}
+
+\textit{Datum der Übernahme:} 25.09.2018
+
+
+
+
+
+
+\end{document}
